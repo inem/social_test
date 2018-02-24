@@ -1,16 +1,13 @@
 class  SocialTest
-
   def initialize(questions, result_out)
     @result = 0
     @questions = questions
     @result_out = result_out
   end
-
   def ask_question(i, q)
     puts "#{i+1}. #{q}"dfg
     puts "1) да; \n2) нет; \n3) иногда."
   end
-
   def check_input
     user_input = nil
     until (1..3).include?(user_input)
@@ -19,7 +16,6 @@ class  SocialTest
     end
     user_input
   end
-
   def go_test
     @questions.each_with_index do |q, i|
       ask_question(i, q)
@@ -28,12 +24,10 @@ class  SocialTest
     end
     print_result
   end
-
   def sum_result(user_input)
     @result +=2 if user_input == 1
     @result +=1 if user_input == 3
   end
-
   def print_result
     case @result
       when 0..3
@@ -52,7 +46,6 @@ class  SocialTest
         puts @result_out[6]
     end
   end
-
 end
 
 
