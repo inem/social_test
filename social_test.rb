@@ -5,7 +5,7 @@ class  SocialTest
     @result_out = result_out
   end
   def ask_question(i, q)
-    puts "#{i+1}. #{q}"dfg
+    puts "#{i+1}. #{q}"
     puts "1) да; \n2) нет; \n3) иногда."
   end
   def check_input
