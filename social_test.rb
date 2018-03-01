@@ -25,25 +25,18 @@ class  SocialTest
     print_result
   end
   def sum_result(user_input)
-    @result +=2 if user_input == 1
-    @result +=1 if user_input == 3
+    @result += 2 if user_input == 1
+    @result += 1 if user_input == 3
   end
   def print_result
     case @result
-      when 0..3
-        puts @result_out[0]
-      when 4..8
-        puts @result_out[1]
-      when 9..13
-        puts @result_out[2]
-      when 14..18
-        puts @result_out[3]
-      when 19..24
-        puts @result_out[4]
-      when 25..29
-        puts @result_out[5]
-      when 30..32
-        puts @result_out[6]
+      when 0..3 then puts @result_out[0]
+      when 4..8 then puts @result_out[1]
+      when 9..13 then puts @result_out[2]
+      when 14..18 then puts @result_out[3]
+      when 19..24 then puts @result_out[4]
+      when 25..29 then puts @result_out[5]
+      when 30..32 then puts @result_out[6]
     end
   end
 end
