@@ -1,4 +1,16 @@
-require './social_test'
+require_relative './lib/social_test'
+
+def print_result(result, result_out)
+  case result
+    when 0..3 then puts result_out[0]
+    when 4..8 then puts result_out[1]
+    when 9..13 then puts result_out[2]
+    when 14..18 then puts result_out[3]
+    when 19..24 then puts result_out[4]
+    when 25..29 then puts result_out[5]
+    when 30..32 then puts result_out[6]
+  end
+end
 
 questions = [
       "Переживаете ли вы в ожидании важной деловой встречи?",
@@ -64,7 +76,9 @@ social_test = SocialTest.new(questions, result_out)
 puts "Тест поможет определить ваш уровень коммуникабельности.
 Для этого необходимо правдиво ответить на следующие вопросы."
 
-social_test.go_test
+result = social_test.go_test
+
+print_result(result, result_out)
 
 
 
